@@ -1,0 +1,2209 @@
+Commands :
+----------
+1.git status   	> To know the status of Repository/Folder
+2.git init 	> To make the folder as Git Repository
+
+3.git add hello.txt	> To Start tracking some untracked Files/Folder  > This is 1st Step of Saving
+4.git commit -m "This is First Commit"
+
+
+
+5.Set Email id & name:
+	git config --global user.email "mpremchand99@gmail.com"
+	git config --global user.name "Premchand Vishwakarma" 
+
+
+6.git log	> To Know History of Commit
+
+
+
+
+EPIC:
+-----
+As a Student I want Web Application so that I can complete my course at any time
+As a trainer I want web application  so that I can manage my courses
+As a Visitor I want udemy Web Application so that I can explore courses without registration
+
+User Story:
+-----------
+As a visitor I want search feature on Website  so that I can search any interested course
+As a Visitor I want sign-up feature  on website so that I can register my self
+As a Visitor I want sign-in option so that I can sign-in when ever required
+As a Visitor I want filter option so that I filter out some not interested courses
+
+
+1.Create a Sprint 
+2.Add User Stories to Sprint
+3.Click on Sprint
+
+
+Created Test Cycle > Adding Test into Cycle.
+
+
+
+JIRA: It is Test Management Tool which manages all phases of STLC
+
+
+>Created  Scrum Project
+>Created Version
+>Created Epic
+>Created User Story
+
+>Created Sprint
+>Adding Story to Sprint
+>Started Sprint
+>Created Sub-Task for Every User Story
+>Practicing Scrum Board
+
+>Added Plugin for Test Management > Zephyr
+>Created Test Cases
+>Test Cycle Creation
+>Test Execution
+>Defect|Bug  Reporting
+>Report
+	BurnDown Chart: Represents how many story points you have burned against given timeline
+			Its a graph with Story point with Y-axis & Number of Days as X-axis.
+
+
+------------------------------------------------------------------------------------------------------------------
+Similar to Jira : ALM(QC)- HP, TestLink - Free/OpenSource, Tarantula etc.
+
+
+
+oldkey=
+newkey=d97d62dd664cd2227f86c8c1cd4a94e9 
+http://api.openweathermap.org/data/2.5/weather?q=Vellore&appid=98631b34d350487ddb493fb676e1f234
+
+<dependencies>
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.3.3</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.8.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+	</dependencies>
+
+		
+public class KeyWords {
+	WebDriver driver; // Class Level Driver
+	public KeyWords(WebDriver driver) { // This Driver Coming from PomRunner(TestNG Class)
+		this.driver = driver; // this.driver tells that Class Level driver
+	}
+	public void getUrl(String url) {
+		driver.get(url);
+	}
+	public void selectFromDropDown(String locatorType, String locatorValue, String option) {
+		Select sc=null;
+		if (locatorType.equals("id"))
+			sc = new Select(driver.findElement(By.id(locatorValue)));
+		else if(locatorType.equals("name"))
+			sc = new Select(driver.findElement(By.name(locatorValue)));
+		else if(locatorType.equals("link"))
+			sc = new Select(driver.findElement(By.linkText(locatorValue)));
+		else if(locatorType.equals("css"))
+			sc = new Select(driver.findElement(By.cssSelector(locatorValue)));
+		else if(locatorType.equals("xpath"))
+			sc = new Select(driver.findElement(By.xpath(locatorValue)));
+		else
+			System.out.println("Invalid Locator");
+		
+		sc.selectByVisibleText(option);
+	}
+	public void click(String locatorType, String locatorValue) {
+		if (locatorType.equals("id"))
+			driver.findElement(By.id(locatorValue)).click();
+		else if(locatorType.equals("name"))
+			driver.findElement(By.name(locatorValue)).click();
+		else if(locatorType.equals("link"))
+			driver.findElement(By.linkText(locatorValue)).click();
+		else if(locatorType.equals("css"))
+			driver.findElement(By.cssSelector(locatorValue)).click();
+		else if(locatorType.equals("xpath"))
+			driver.findElement(By.xpath(locatorValue)).click();
+		else
+			System.out.println("Invalid Locator");		
+	}
+
+	public void getSnap(String fileNameWithPath) {
+		TakesScreenshot tc = (TakesScreenshot) driver;
+		File src = tc.getScreenshotAs(OutputType.FILE);
+		try {
+			FileHandler.copy(src, new File(fileNameWithPath + ".png"));
+		} catch (Exception E) {
+			System.out.println("Error in File Reading "+E.getMessage());
+		}
+	}
+}
+
+
+public class CSVExample {
+	@Test
+	public void f() throws Exception {
+		// Connect with CSV file
+		CSVReader cs = new CSVReader(new FileReader("C:\\Users\\Bhajan\\Desktop\\data.csv"));
+		
+		List<String[]> allData = cs.readAll();  // Read all Data from CSV file
+
+		for (int i = 0; i < allData.size(); i++) {
+			String[] row = allData.get(i); // It will give particular row's Data
+
+			String user = row[0];   // 1st Column  > UserName
+			String pwd = row[1];    // 2nd Column  > Password
+			System.out.print(user + " "); // userName
+			System.out.println(pwd); // Password
+		}
+	}
+}
+
+
+Premchand Vishwakarma since 2018
+Manual Testing > ISTQB
+Selenium
+Jmeter
+POSTMAN
+RestAssured
+Maven
+Git
+Jenkins
+Sikuli
+Cucumber etc.
+
+
+ISTQB:
+-----
+1.CTFL : Certified Tester Foundation
+2.CATE  : Certified Agile Tester Extension
+3.CTAL-TM
+4.CP-SAT
+
+Gaurav 
+Sonali
+
+-----------------------------------------------------------------------------------------------------
+What is Testing:
+---------------
+A process of Comparision between Expected & Actual Behavior 
+
+
+Why testing is done ?(What are Objectives of Testing ?)
+	>to Find a Bug >>> tester's Objective
+	>to check it is meeting customer expectations or not or Business Need > Customer Expectation
+	
+
+Objective of Testing is going to vary according to person, type of Testing or Levels of Testing
+
+Till Year 2000 Developer was doing Testing of Thier Code
+
+Why Testers Need is there ?
+---------------------------
+To avoid author biassness(emotional attachement) & This is Called as Independant Testing
+
+If you develop something you get emotionally attached to that thing & after emotional attachement you will be not able to find more defects.
+
+The more defects you find the more defects will get fixed & utimatly will increase Quality of Application.
+
+
+
+SDLC: Set of Phases through which Every Software goes through
+
+1.Requirement Gathering & Requirement Analysis:
+	Requirement Gathering:
+	BA(Business Analyst) will collect requirement from Customer
+	BRS (Business Requirement Specification) created By BA
+	
+	Requirement Analysis:
+	--------------------
+	Analysing requirement wheather it is 
+	Correct 
+	Complete
+	feasible(Achievable)
+	Testable
+
+	Done By Sr.BA/ System Analyst & SRS (SoftWare requirement Specification)
+
+	Login Page should Open Very fast.
+			> Time ?
+			> NetWork
+
+	Types of Requirement:
+	--------------------
+	1.Functional Requirement
+		What the Software should Do ?
+		Like
+		1.WhatsApp should be able to do new User Registration
+		2.It should take backUp
+		3.It should be able to do 1:1 Chatting
+		4.It should block/Unblock
+		5.Video/Voice Calling
+
+	2.Non-Functional Requirement:
+		Related to Color, Font, Size, allingment, Speed, theme
+		>Green Color in WhatsApp
+		>How Quickly WhatsApp is Opening
+
+
+	BRS vs SRS: up
+	-----------
+		BRS:
+		-It is Document which have requiments in Laymen(Plain English Language)
+		-Hence It is Considered as Non-Technical Document
+		-Most of the time it will have Only Functional Requirement
+
+
+		SRS:
+		-It is Document which having technical information about requirement
+				(size of Text field, Type of Element, Validation details ).
+		-It is Considered as Technical Document
+		-Functional & Non-Functional requirment is Details.
+
+
+2.Planning & Design:
+	
+Planning:  (Failing to Plan means Planning to Fail).
+	>Deciding Roles & Responsibilities
+	>Scheduling
+	>Exit Criterira
+	>Risk & Contigencies
+		
+	Done By Project Manager & Project Plan is Document which is Created
+
+3.Design:
+------
+	Design is bluePrint/Structure of Application.
+	1.HLD / High Level Design : System Level
+		> This gives flow of Complete system 
+		>UML Diagram of ATM Machine
+	2.LLD / Low level Design : Module Level/Unit Level
+		>Detail Diagram for particular Module
+		>ScreenShot of LoginPage
+	
+	Created By Software Designer
+
+4.Coding/Implementation:
+---------------------
+	>Programme is Written in Selected Language By Programmer
+	>Source Code Document is developed in this Phase
+	>Here actual Application will be developed.
+
+		>End Product of Coding Phase is Working Software
+
+5.Testing:
+--------
+	>Testing will Evaluate the given Software against Customers given requirement.
+	>A Seperate Testing Team will be involved
+	>There are Mutiple Documents are developed Here For Example
+		1.Test Plan
+		2.Test Scenario
+		3.Test Cases
+		4.RTM
+		5.Defect Report (A report is created after identifying any defect which will have 		date, module Name, Summary, Steps of Defect etc. for Developer's Reference)
+		6.Reports
+
+		
+		Test Case: For Checking Login
+		----------
+		Step:				Test Data	Expected Result
+		1.Enter UserName		admin		Entered Username should display
+		2.Enter Password		admin123	Encrypted Password should display
+		3.Click on Login Button				Home Page Should display
+
+		Test Case(Document) is Sequenced Step for Testing.
+
+
+6.Installation/Deployment:
+-------------------------
+>Project Manager creates a team which is group of Developer & Tester named as Deployment Team which visits client Side for Deploying product
+>After installation re-running test Cases to See, is EveryThing is OK.
+>Documents like reports, proof of Customer's Acceptance, Defect Reports.
+
+
+7.Maintenance Phase:
+--------------------
+>Project Manager creates a team which is group of Developer & Tester named as Maintenance Team which
+helps Customer for Resolving any kind of issues.
+
+Types of Changes:
+1.Corrective Changes
+
+Defect identified >  reported to developer > Developer identifies Cause of Failure > Developer Does Some Kind of Changes for Fixing defect(Corrective Changes)
+
+2.Adaptive Changes:
+	Adding new Feature will be considered as Adaptive Changes
+
+
+ 
+Here, For Training We have mix People
+
+
+Testing Method:
+--------------
+1.Black Box Testing/ Specification Based Testing/Close Box Testing:
+	>User gives input to System & Interested to have Proper Output from System according to input
+	without knowing internal Structure of system.
+	>Mostly Done By Quality Engineer/ Software Test Engineer.
+
+2.White Box Testing/Glass Box/Open Box/Structure Based Testing:
+	>User gives input to System & Interested to have Proper Output from System according to input
+	with knowing internal Structure of system.
+	>Mostly Done By Developers/Programmer
+
+6 Month Project:
+----------------
+
+1M: RGA 
+1M: D
+2M: C
+--------
+	4 Month > You will be getting Software for Testing
+
+SDLC >For Developer
+STLC >For Tester > Software Testing Life Cycle.
+
+-----------------------------------------------------------------------------------------------------
+
+Software Testing Life Cycle:
+----------------------------
+
+1.Test Planning:
+	>Test Manager/ Test Lead/Project Manager Creates a Plan for Whole Testing Project which will 	test Strategy or Approach for Testing.
+	>Test Plan Document will be Created
+	>Schedule
+	>Roles & Responsibility
+	>Scope of Testing
+		>Feature to be Tested & Feature not to Tested
+	>Risk & Contingencies
+
+2.Test Monitoring & Control
+	>It is Done by Test Manager or Key Responsible Person 
+	>Here Activity of all Phases is Being Monitored & if any deviation is found then some 	controlling activity is  taken so that Project should be on Track.
+	
+	Monitoring happens By Following Parameter,
+	Test Cases Written /Day
+	Test Cases Written /Tester
+	Test Script Written /Day
+	Test Script Written /Tester
+	Test Cases Executed/ Day or /Tester
+	Defect Reported /Day or Tester etc.
+
+	Above are called as Test Matrix(A measurement Unit)
+
+Task:
+-----
+
+Take a Any Software Application & List out 5 Functional & 5 non-Functional Requirement
+
+
+
+
+
+Saraswat GOMO Mobile Banking App
+
+Functional Requirements:
+1.login process should be fast.
+2.Updated balance should be visible quickly after Transaction
+3.Should have options like registered and non-registered payee
+4.OTP service should be there
+5.User should get OTP within a minute from transaction executed
+6.After entering wrong pin while login or when transaction initiated a user should get msg of that
+7.In case of failure of transaction ammount should get refunded within 24 hrs
+8.Recent Transactions
+
+
+
+Non Functional:
+1.Offrers Section
+2.theme
+3. Allignment , font size, Advertisement 
+4. Color
+5.Text size text style
+6.Logout button should be visible properly
+
+
+
+
+
+
+
+
+3.Test Analysis
+4.Test Design
+5.Test Implementation
+6.Test Execution
+7.Test Clouser Activity | Test Completion Activity
+
+
+
+Software Testing Life Cycle:
+----------------------------
+
+1.Test Planning:
+	>Test Manager/ Test Lead/Project Manager Creates a Plan for Whole Testing Project which will 	test Strategy or Approach for Testing.
+	>Test Plan Document will be Created
+	>Schedule
+	>Roles & Responsibility (Who is InCharge of Which Activity)
+	>Scope of Testing
+		>Feature to be Tested & Feature not to Tested
+	>Risk & Contingencies
+	>Exit Criteria (When To Stop testing)
+		>i,e. Application should be 90% Good in Quality & All Test Cases Should be Executed(100% Coverage of 		Execution)
+
+2.Test Monitoring & Control
+	>It is Done by Test Manager or Key Responsible Person 
+	>Here Activity of all Phases is Being Monitored & if any deviation is found then some 	controlling activity is  taken so that Project should be on Track.
+	
+	Monitoring happens By Following Parameter,
+	Test Cases Written /Day
+	Test Cases Written /Tester
+	Test Script Written /Day
+	Test Script Written /Tester
+	Test Cases Executed/ Day or /Tester
+	Defect Reported /Day or Tester etc.
+
+	Above are called as Test Matrix(A measurement Unit)
+
+3.Test Analysis
+	>Done By Software Tester
+	>Undertanding SRS/BRS. Here Tester is Think about Which Feature/Function should be Tested
+
+4.Test Design:
+	>Writing Test Scenario  
+	>Writing Test Cases (High Level - Flow of Test Case from Start to End )
+	>Creating RTM- Requirement Traceability Matrix (A Document which has Mapping between Requirement & Test case)
+	>Done By Software Tester
+	
+5.Test Implementation:
+	>Test Cases should be Converted into Language of Tool  > Test Script
+	>Test Script Writing Happens By Automation Tester.(OPtional If you are not doing Automation Testing)
+	>Low Level Test Cases (Module Detail Test Cases are Written)
+	>Update RTM
+	>Test Environment SetUp (OS, Brower, RAM, LAN Setting etc. For Testing Application) with Support of System 	Engineer
+
+6.Test Execution (Testing Phase of SDLC)
+	>Following Steps of Test Case on Software(AUT/SUT)
+	>Execution can happen Either Manually or With the help of Tool Support
+	>Comparision between Expected & Actual Results/Behavior will happen Here.
+	>Any Difference between Expected & Actual result is found then It should be reported as Defect to Developer
+	>Testing team will be in this phase only till the time testing team do not reach Exit Criteria. 
+
+7.Test Clouser Activity | Test Completion Activity
+	>Done After Releasing Application.
+	>Store( for later Re-use) & Share(as a proof of Testing) Documents
+	>Store & Share Learnings/Experience	
+
+
+
+
+Test Case: For Checking Login
+		----------
+		Step:				Test Data	Expected Result
+		1.Enter UserName		admin		Entered Username should display
+		2.Enter Password		admin123	Encrypted Password should display
+		3.Click on Login Button				Home Page Should display
+
+
+Execution of Test Case : Following Steps of Test Case on Software
+Execution> 1.Manual Execution
+		Tester(Human) follows Steps on Application/Software  > Manual Testing
+
+	   2.Automation Execution (Execution Done by Tool)
+		A tool/Software follows Steps on Application/Software	>Automation Testing
+
+Registration		>		To Check Registration with all Valid Details
+					To Check Registration with invalid FirstName & Invalid Others.
+
+----------------------------------------------------------------------------------------------------
+
+Testing & Debugging:
+-------------------
+
+Testing: 
+1.It is process in which we(tester) do Comparision between expected & Actual
+2.Generally Tester Perform this activity 
+
+
+De-bugging (removing Bug):
+-------------------------
+1.Identifying Cause of Failure
+2.Doing Some kind of Corrective Changes
+3.Done By Developer
+
+Defect identified >  reported to developer > Developer identifies Cause of Failure > Developer Does Some Kind of Changes for Fixing defect(Corrective Changes)
+
+--------------------------------------------------------------------------------------------------------------------
+
+R G & A
+Design
+Coding
+---------------- Development 
+Testing
+----------------- Testing 
+Installation
+Maintenance
+----------------- Live
+
+
+Error|Mistake: An InCorrect human Action mostly done by Developer
+
+Defect|Bug : Difference Between Excpected & Actual Behavior
+
+Failure : If defect is visble to End USer/Customer
+
+
+Types of Defects:
+-----------------
+1.Functional Defect:
+	Defect in Functional requirement
+
+	Wrong Defect: The Requirement is Mentioned in SRS|BRS & Application is also having that functionality but 		      Functionality not working as per expected.
+			i.e After Entrring details of Flight & Searching It is showing flights not available for Every 			Search.
+
+	Missing Defect: The Requirement is Mentioned in SRS|BRS But Application is not having it (Missing)
+			i.e Filter Option  for Stops is Not available 
+
+	Extra Defect: In SRS/BRS Requirement is not mentioned but still your application is having it.
+			i.e In Search Results of flights, option of Hotel Booking is there.(Customer did not asked for 			Hotel Option in Flight Search Results)
+
+
+2.Non-Fuctional Defect:
+	Defect in Non-Functional Requirement
+	Logo of Flights Vendor get Swapped 
+
+7 Principles of Testing:
+----------------------
+1.Testing Shows Only Presence of Defect (Not their Absence)
+	If You do 100 years of Testing still you can not say your Software is 100% bugfree
+
+2.Exhasutive/Complete Testing is Impossible
+	Since Performing Complete Testing will take lots of time & resources. In replcement of Exhaustive Testing Risk 	Based Testing is done.
+
+	FaceBook.com
+	1.Do no Testing
+	2.Do Only Important Testing(Partial)
+	3.Do Complete Testing
+
+
+With the help of Testing we can not give 100% Bug free Software but with testing we can minimize failure rate(probablity)
+for application.
+
+3.Early Testing: To avoid Defect Multiplication Testing activities should start from As soon as Possible(from 1st Phase)
+----------------
+		>Since Defect found later will cost for Fixing
+				Verification
+
+R		: Correct Requirement + 1 Incorrect Requirement	
+D		: Correct Design      + 3-4 Incorrect Design 
+C		: Correct Code	      + 10-12 InCorrect Source Code 
+T		:
+Dep
+Maintenace:	 
+
+
+4.Defect Clusturing:
+80% Defect is Present in 20% of the module.
+Defects are Present in Clustur & Size of Clustor will vary depending on Complexity. IF Particular Module is More COmplex then More Defects will be available in that module.
+Hence Your Testing should be focused on Complex module for increasing number of Defects
+
+5.Pesticide Paradox:
+--------------------
+To Maintain Defect Finding  Capability of Test Case, Tester should update/modify Test Cases or Should Write new Test Cases.
+
+
+10 Ago Pesticide
+Pesticide Kills Bugs
+Test Cases Help in Killing Bugs
+
+V1.0 > Test Case
+V10.0 > same Test Case with some Modification
+
+--------------------------------------------------------------------------------------------------------------
+
+
+QA, QC, QMS
+-------------
+
+Rules/Protocol/Guideline:		QMS (Quality Management System) : Group of People who Makes Rules
+-------------------------
+1.Take any Vessale
+2.Add 3 Cups of Water
+3.Add 1 Spoom Tea Powder
+4.One Cup of Milk
+5.boil for 10 Minutes
+
+
+One Person will be there for Monitoring  
+		QA:  Group of People who take care whether proper Process/rule is followed or not
+
+One Person will be for Tasting Tea.(End Product of Process)
+		QC : Checking End Product
+
+
+
+
+QMS : - Test Plan should be according to IEEE 829 format
+
+QA : Will Your Test Plan Document Whether it is having IEEE 829 Format or not
+
+QC : Checking End Product of Developer (Software)
+
+
+
+Training Manager :
+	DB, JAVA, Manual Testing, Selenium, DevopS  > Training process
+
+Srishti- QA : Rule/process Made By Manager is followed or not
+
+ 
+SME- QC : Checking All Trainee's Knowledge (End Product of Training Process)
+----------------------------------------------------------------------------------------------------------------
+
+Types of SDLC Model:
+--------------------
+1.Sequential MOdel
+	1.WaterFall
+		> It is First Model Which was developed & Base Model for all Other Model
+		>Every Activity in this case is sequenced means next activity/phase can not be started till the time 		previous activity/phase is not completed.
+		>And You can not rollback means You can Roll back to previous phase
+		>Since It is Sequencial Hence Testing starts in Testing phase Only
+
+
+		Adv:
+		---
+		1.Best Suited for Small Scale Project Where Less Chances of Changes are there
+
+		DisAdv:
+		-------
+		1.High Chance of Defect Multiplication is there since Testing Starts in Testing Phase Only.
+		2.Customer can not do Changes in Requirement in between Development
+		3.Not SUited for Complex or Big Project
+		4.Customer is able to see product towards End only
+
+
+	2.V-Model (Will Discuss After Verification & Validation)
+2.Iterative/Incremental Model / Multi WaterFall model
+	1000 req	> 1.5 year
+	
+	250 req	> R1
+	250 req > R2
+	250 req > R3
+	250 req > R4
+
+
+R1 		>D	>C	>T	>dep	>M		: Customer Starts using this Product
+R1+R2		>D	>C	>T	>Dep	>M		: Second Version with 500 req is release & Customer using
+R1+R2+R3	>D	>C	>T	>Dep	>M		: Third Version with 500 req is release & Customer using
+R1+R2+R3+R4	>D	>C	>T	>Dep	>M		: 4th Version with 500 req is release & Customer using
+
+Adv:
+1.In Short Period we are  getting business solving product
+2.FeedBack from Previous Phases is taken & Added to next Version
+
+DisAdv:
+1.It is more time consuming
+2.Not suited for Small Projects
+3.It is cost consuming also
+
+
+Agile:
+------ 
+	In Agile Requirment means User Story
+Sprint Planning : In This meeting Team decides How many iterations going to be happen & How many user stories going to be there in each iteration.
+
+	250 req	> R1
+	250 req > R2
+	250 req > R3
+	250 req > R4
+
+Product BackLog: It is backlog(pending) requirement for Whole Product to complete.
+			40 Subject
+Sprint BackLog:  It is backlog(pending) requirment for Only 1 Iteration
+
+			5 Subjects for any particular Sem 
+
+
+
+WT		WT	WT	WT
+R1 		>D	>C	>T	>dep	>M		: Customer Starts using this Product
+PB:1000						PB:750
+SB:250						SB:0
+
+
+
+R1+R2		>D	>C	>T	>Dep	>M		: Second Version with 500 req is release & Customer using
+PB:750						PB:500
+SB:250						SB:0
+
+R1+R2+R3	>D	>C	>T	>Dep	>M		: Third Version with 750 req is release & Customer using
+PB:500						PB:250
+SB:250						SB:0
+
+R1+R2+R3+R4	>D	>C	>T	>Dep	>M		: 4th Version with 1000 req is release & Customer using
+PB:250						PB:0
+SB:250						SB:0
+
+
+Whole Team Approach: 
+-------------------
+A group of Designer, Programmer, Tester & Customer Representative.
+
+
+Adv:
+---
+1.Quality is not indivisual Responsibility, It is a group responsibility.
+2.Customer is acting as immediate Validator (Immediate FeedBack) So End Product will be very Good in Quality.
+3.Transparancy with Customer is there
+4.Good for Complex/Big Projects.
+
+Other feature:
+-------------
+1.Agile Iteration lasts for 1-4 Weeks.
+2.Daily Stand up Meeting for 15 minutes
+		1.What happened YesterDay ?
+		2.Any bottleNeck you faced ?
+		3.What is Plan for today ?
+
+
+
+Product Owner > BA : Who Take Cares about Requirement (Performing Maintenance activity of Requirement i.e. Adding, 		      editing, deleting requirements etc.)
+Scrum Master : Guiding/Helping Team.
+
+
+User Story:
+As a <Type of user> 
+I want <Some Need>
+So that <Some Benefit>
+
+As a Customer 
+I want withdraw function in ATM machine
+So that I can withdrow at any time
+		
+
+Product Backlog : 40 Subjects for Whole 4 Years of B.E.
+Sprint BackLog : 5 Subjects for Every Sem
+
+
+SEM1			after Exam	
+	PB:40					PB: 35
+	SB:5					SB: 0
+SEM2
+	PB:35					PB: 30
+	SB:5					SB: 0
+
+SEM3
+	PB:30					PB: 25
+	SB:5					SB: 0
+
+SEM4
+	PB:25					PB: 20
+	SB:5					SB: 0
+
+SEM5
+SEM6
+SEM7
+SEM8
+	PB:5					PB: 0
+	SB:5					SB: 0
+
+						
+
+-------------------------------------------------------------------------------------------------------------
+Retrospective Meeting:
+	Done at the end of every sprint/iterationto know what went right, what went wrong & What is improvement suggestions for next iteration.
+
+
+
+
+
+Scrum Board:
+------------
+It is Kept at Common place where everyOne is able to see And By Seeing Scrum Other People will get idea what is status of particular task or Project
+
+
+Story		To Do			In Progress		Done
+-----		-----------		-----			----
+	
+Story 1								Making Design
+								Writing Code
+								Writing Test Cases
+
+-------------------------------------------------------------------------
+Are we buiding right product ?		> trying to check Product
+					  -QC Activity
+					  -Validation
+
+Are we buiding product right ?		> trying to check Process
+					  -QA Activity
+					  -Verification
+
+Module 2: Verification & Validation
+-----------------------------------
+R
+D
+C	- Source Code
+T
+Dep
+M
+
+
+
+Verification									Validation
+----------										----------
+1.Are we buiding product right?				1.Are we buiding right product?
+2.Checks Process							2.Checks Product
+3.QA Activity								3.QC Activity
+4.Done by Reading Documents				4.Happens By Executing the Product/Software
+5.Static Testing							5.Dynamic Testing
+6.It can happen in All phases of SDLC			6.In Last 3 Phases(Testing, Installation,Deployment)
+7.It is Defect Preventive Approach				7.It is Defect detective & Corrective Approach
+8.It cost less for Fixing						8.It is costier for Fixing
+9.Exact Root cause of Problem can be			9.Only Presence of Problem is identified &
+identified (Since we are reading Document		Not exact root cause since we are doing Black
+like Source code & suppose ';' is missing		box Testing in which Source Code/internal .so you will be able to tell exact line Structure is not visible
+number which is creating Problem-root cause)
+10.Technique:                                                                 10.Techniques(Levels of Testing)
+
+1.Walkthrough									1.Unit Testing	
+2.Inspection									2.Integration Testing
+											3.System Testing
+											4.Acceptance Testing
+
+
+5.1.2
+5.5.1
+5.5.2
+1.3
+2.2
+
+
+Informal Process:
+----------------
+1.No Rules/Protocol/Guidelines
+2.No Schedule(No Planning)
+3.No Meeting 
+
+
+Verification Techniques:
+-----------------------
+1.WalkThrough:
+	>It is a Informal Process
+	>It is always done/Led by Author of Document
+	>Explain Document to EveryONe so that EveryOne should be On common Page/Level
+	>Objective : Learning, Understanding & Finding Defects
+
+
+2.Inspection:
+	>It is Formal Process
+	>Done at End of Every Phases to Check 'is the phase is completed & can we move to next phase or Not ?'
+	>Objective: Finding Defect
+	>Since Objective is Finding Defect Hence detail Verification happens here.
+	>Checklists are used to Increase Number of Defect.
+
+
+5 Major Roles are there:
+-----------------------
+Moderator : Co-ordinator who will be communicating things(time, venue, agenda) with other
+Author : Owner of the Document
+Reader : The Person who will read Document/Problem for Other
+Recorder/Scribe : This Person will note the minutes of Meeting
+Reviewer | Inspector : Domain Expert of Particular Phase 
+
+---------------------------------------------------------------------------------------------------
+
+Validation Techniques:(Levels of Testing)
+-----------------------------------------
+
+
+1.Unit Testing/Component Testing/Module Testing/Programme Testing:
+---------------------------------------------------------------
+>Running/Checking small piece of Code which is able to provide some output
+>Done By Developer/Programmer
+>Test Method:
+	1.White Box Testing: (Since Code is Visibe)
+	2.Black bOx Testing: (You might ask another developer to do Testing then That developer will Just run code 	without bothering code & Suppose Software Tester is Doing Testing he/she is not able to see code itself. )
+
+
+2.Integration Testing:
+>Checking Communication/Intraction between two or more modules modules
+>Mostly Done By Developers
+>Approaches (For Developers)
+	1.Top Down Approach
+		>In This Bottom Module(Child) is not ready & Top Module is Ready(Parent). 
+		>After For Child Module Dummy Code/Module is Made & Communication with Parent is Checked. And If 		Communication with Parent is Working actual Module is Made.
+		>Dummy Module in this Case is termed as 'STUB'
+
+	2.Bottom Up Approach:
+		>In This Top Module(Parent) is not readt & Bottom Module is ready(Child)
+		>After this For Parent Module Dummy Code is  & Communication with Child is Checked. And if Communication
+		with Child is Fine then Actual Code is Made for Not Ready Module
+ 		>Dummy Code in this Known as 'Driver'
+
+
+Advantage of Making Dummy First:
+-------------------------------
+1.Early Defect detection between interfaces will be identified
+2.Which is will reduce later rework & will save time & Cost.
+
+
+3.System Testing:
+-----------------
+>It is responsibility of Independant Testing Team (Seperate Testing Team).
+>IF you combine All the Modules into SIngle Unit then System is Framed & Testing Team will do Testing on Complete System Only & It will be called as System Testing.
+>It is Final Level of testing from Organization& Hence As many as possible defect you should find to increase Quality.
+>Main Objective: To find Defect
+>If More Defects are found then Quality of Product will increase if Those Defects are fixed
+>After System Testing Software/Product will be visible to End User.
+>All Functional & Non-Functional Requirements should be tested in detail since After this Product will be visible to end user.
+
+4.Acceptance Testing:
+--------------------
+	>Customer or Customer Representative will do This 
+	>It is decision making to accept the Product or Reject the Product
+		(If Meeting customer expectation then accept & If it is meeting customer Expectation then Reject)
+	
+	a.User Acceptance Testing
+		>Done By always Business Category Person( The Person who is going to use it for making business).
+		
+		Alpha Testing(Internal Testing):
+		------------------------------
+		>Customer visits Development Organization for Testing
+		>Done Inside Company's Environment
+
+
+		Beta Testing(External Testing):
+		-------------------------------
+		>Our Team(Deployment Team) Visits Client Side & Then Customer does Testing
+		>Done in Live Environment (Customer Environment)
+
+
+	b.Operational Acceptance Testing
+		>It is decision making Point By System Engineer whether he/she is able to do installation/re-				installation, recovery, user Management etc.
+		>System Engineer is not a Business Category Person(He/she will not do business with the help of Product)
+
+
+	c.Contractual & Regulatory Acceptance Testing:
+	
+		Contractual Acceptance Testing:
+		------------------------------
+		1.Contract Criteria is Checked(And Contract Criteria was made when two Parties/Companies agrees for 		certain Services).
+		2.Any violation of TNC(terms & Condition) if there then Actions should be taken accordingly
+
+
+		Regulatory Acceptance Testing:
+		------------------------------
+		>Check if Product is following guidelines given by particular COntrolling Body
+			For Example SBI, HDFC, ICICI must follow guidelines given By RBI
+
+
+System Integration Testing (Optional):
+		>It is CHecking communication/Intraction between two or more Systems(Software).
+		>Done After System Testing
+
+As Per ISTQB, 
+Both Functional Requirement & Non-Functional Requirment Checking can happen at Any Level
+But At Unit testing & Integration Testing, Non-Functional Requirement Checking will happen less. 
+(Limited Non-Functional Testing happens at Unit & Integration Level)
+
+
+--------------------------------------------------------------------------------------------------
+Life Cycle Testing:
+-------------------
+	>Every Development Activity should have Testing activity associated with It.
+		(What Ever yoy develop have/do testing with it.)
+
+
+	Adv:
+	>Avoid Defect Multiplication:
+
+V-model:
+
+
+
+Module 3:Type of Testing:
+------------------------
+1.Testing Related to Change (Considered After Doing Any kind of Changes)
+	1.ReTesting/Confirmation Testing:
+		What : It is re-execution of same Failedd Test Cases
+		When : After Defect is fixed by developer
+		Why : Defect is actually Fixed or Not this confirmation will happen
+
+		You Found defect > You will report to developer > Developer will try to do root cause Analysis
+		And After find Cause developer will do some corrective changes >defect fixed >new Build Created &
+		given to Tester. > Tester will confirm whether defect is fixed or not.
+
+
+	2.Regression Testing:
+		What : Checking impact/effect of Change Area/portion on UnChange Area/Portion 
+		When : When ever there is Changes
+		Why  : Due to Changes there should not be any kind of new Defects in Related Modules or Functions
+
+		It happens on Pass Test Cases Only Since They are related to Unchange Area.
+
+	Causes of Changes in Software:
+	------------------------------
+	1.Defect Fixing
+	2.Adding new Feature/Functions
+	3.Editing/Modifying any Feature
+	4.Deleting any feature
+	5.Any Environment Change
+
+	1000 TC: All 1000 Test Cases Executed
+		
+	800 TC > Passed
+	200 TC > Failed
+
+	ReTesting 	   >	200 TC
+	Regression Testing >	Unknown (<=800 Passed Test Cases)
+
+
+	To Know exact Number of Test Cases for regression testing you need to do Impact Analysis using RTM.
+
+	RTM(Requirement Tracebility Matrix): It is document which Provides Mapping between requirement & Respective Test 	Cases. It is also known as bi-directinal Tracebility Matrix.
+		
+	Adv of RTM:
+	1.All requirement is Covered for Testing or not (There must be 100% requirement Coverage).
+	2.For Impact Analysis 
+
+	Impact Analysis: A Process in Which we try to get number of linked passed test cases to Failed Test Cases.
+			 It gives number of test Cases to be executed in Regression Testing.
+
+	
+
+	Since Regression Testing is repitative in nature It is Good candidate for Automation Testing.
+	Regression Testing Tools Selenium, QTP(UFT)-HP, RFT-IBM 
+
+
+2.Testing Related to Function/ Functional Testing:
+	Smoke Testing/BAT/BVT/Confidance Test/Intake Testing:
+		It is decision making point to accept the product or reject the Product for detail/Systematic Testing.
+
+		What : It is Checking Basic/Critical Features 
+		When : Before Starting detail Testing or Systematic Testing & When Build is relativly unstable
+		Why  : To check Stability (If it is Stable in SmoKe Testing then it will stable in detail Testing)
+
+	Sanity Testing:
+		What : Here, Checking of new Feature or Bug Fix
+		When : when build is relativly more stable after multiple rounds of regression testing & Before detail 			Testing
+		Why : To check Stability (If it is Stable in Sanity Testing then it will stable in detail Testing)
+
+	Smoke Testing & Sanity Testing are not replacement of Systematic Testing Since They are Just Mouse Clicks.
+
+3.Testing Relaeted to Non-Function/Functional Testing:
+	1.Performance Testing: Testing Behavior of the application w.r.t response time.
+
+	Load Testing : Checcking with Customer Specified Load (Number of User)
+
+
+	Stress Testing : Checking beyond Customer Specified Load. Keep of Increaseing Load Gradually to find Crash 			Point/Break Points( A Ppoint where Server Starts giving no response) 
+
+	Since here Number of Users are more Hence It should be also done By Automation Testing 
+	Automation Tools for Performaance Testing i.e Jmeter, LoadRUnner-HP, RPT- IBM
+
+
+	2.Compatibility Testing:(Multi-Platform Testing):
+	>Checking with Multiple Platform
+	>For Web Application Platform is Browser.So If you want to do Compatibility Testing for this you need check with 	different Browser or different version of same browser. Since You control end user to use only particular browser 	hence it is more important to do compatibility testing in case Web Application.
+	>For Desktop Based Application You can try with different OS(Linux/MAC/Windows) or different version of same OS	(Windows 7/WinDows 8/Windows 10/Windows 11)
+
+
+	3.Usability Testing:
+		What: It is Checking application about 'How much Easy is the application to use ?"
+			Ease of Use
+		When : After Functional Testing.
+		Why : Application should be easy to use for EveryOne. It should be balanced Between new User & Old User
+
+		>Developer & Tester Both are not good as Usability Tester Since they already know How to use the 		application.
+		>Number of web Pages should be less for Particular Form.
+		
+
+		COTS(Commercial off the Shelf): A Software for General People means EveryOne Can use this like WhatsApp
+						>For This Testing with different age group
+						>Usability Testing with Technical group & Non-Technical Group with both 						will happen.
+						>Suverys & Video recording , FeedBack will be taken
+			
+		Custom Software : Software for Specific Group/Company
+						>Here, Usability Testing with Specific User will Happen
+		
+
+	5.User Interface Testing:
+			What: Checking GUI(Graphical Userr Interface)
+			      Checking with Color, Font, Size, Allignment etc
+			      User Friendliness is Check			
+			When: After Functional Testing
+			Why: GUI is First impression Hence it Atracts user.
+			     If Application is not having good GUI then it will be customer dissatisfaction
+			>Application should be consistant with Appearance
+			>Spelling & Grammatical Mistake is also Verified
+			 
+			If Application is having some GUI Problem then Application automatically becomes difficult to use.
+
+
+
+Test Planning:
+-------------
+>A Process of Test Plan Creation will be called as Test Plan.
+>Test Plan is Document which decides Strategy or Approach of Testing.
+
+IEEE 829 Format of Test Plan:
+
+Library Management System:
+-------------------------
+
+1.Test plan ID(Name):
+	Company Level Unique ID is given to Test Plan for identifying Test plan Uniquly
+	
+	LMS_MTP_v1.0   | ProjectName_LevelOfTestPlan_v1.0
+
+	MTP: Master Test Plan > For Whole Project
+	STP: System Test Plan > For particular Type of Testing or  Level of  Testing
+
+	Performance Testing: We need to create Small Plan for Performance Testing since it requires Seperate
+	-------------------- Performance Test Engineer & Seperate System Configuration.
+		
+	Hence for Performance Testing we need to create seperate small Test Plan termed as System Test Plan.
+		
+
+2.Introduction: 3-4 lines about Project, Important Highligts about Content of Test Plan & Audience of Test 			Plan.
+	
+		This Project is for Vivekanand Colleage of engineering. And here there will be Three Type of 			User(1.Admin, 2.Staff, 3.Student).
+			
+		This Test Plan contains types of Testing, Schedule, roles & responsibility, risk, Test 		Environment configuartion etc.
+			
+		This Test plan can be referred By BA, Customer, Development Team, Testting Team.
+
+3.References : What ever document you have referred for making test plan. List out here.
+	1.SRS/BRS > For Deciding Scope of Testing
+	2.Development Plan > When Application will be available for Testing
+	3.IEEE 829 Format of Test plan
+	4.Similar Project or Previous Version of same Project.		
+
+4.Test Items : List of Modules that Planned for Testing Here.
+	1.Admin
+	2.Staff
+	3.Student
+
+5.Features to be tested
+Admin:
+	>Add Staff
+	>Edit Staff
+	>Delete Staff
+	>Add Book
+	>Edit Book
+	>Delete Book
+	>Add Student
+	>Edit Student
+	>Delete Student
+Staff:
+	>Add Book
+	>Edit Book
+	>Delete Book
+	>Add Student
+	>Edit Student
+	>Delete Student
+	>Approve Requested Book
+
+Student:
+	>Request for Book
+	>Suggest Book
+	>Edit Profile
+
+6.Features not to be tested
+	>Pay Fine Online  (Since It will be deliver in next version)
+7.Approach : (How you will do Testing)
+	Test Method:
+		1.Black Box Testing / White Box Testing
+	Types of Testing:
+		1.Usability Testing
+		2.User Interface Testing
+		3.Functional Testing
+		4.Regression Testing
+	Levels of Testing:
+		1.Unit Testing
+		2.Integration Testing
+		3.System Testing
+		4.Acceptance Testing
+	Test Execution Approach:
+		1.Manual Testing
+		2.Automation Testing
+	Test Environment :
+		1.Local 
+		2.On Cloud
+	
+8.Entry & Exit Criteria
+	Entry Criteria(Defination of Ready)- DOR for Testing (SDLC) or Test Execution (STLC):
+		>AUT/SUT should be ready
+		>Test Environment should be ready.(The Software & HardWare combination)
+		>Test Cases Should be ready 
+	
+	Exit Criteria(Defination  of Done)-  DOD for Testing(SDLC):
+		>Application should be 90% good in Quality 
+		>All Test Cases should be executed at least Once(100% Coverage)
+
+9.Test Environment/Test Bed/Test Lab:
+	It is Hard Ware & Softeware Needs for Running Application & for Tools
+	1.OS required 	> Win8/Win9/Win10
+	2.Processor Needed > 32-bit or 64-bit
+	3.Browser Needed : Chrome v95, Firefox v93
+	4.JDK version 11
+	5.Selenium version 4.0.0
+
+10.Test deliverables: List out All Documents that will be produced as a part of Testing
+	1.Test Plan
+	2.Test Cases & Test Suite(Group of Test Cases)
+	3.Test Scenario
+	4.RTM
+	5.Defect Report
+	6.Execution Log
+	7.Test Summary Report
+	8.Test Data
+	9.Test Script etc
+	 
+11.Suspend resume criteria : (Temp. Stop)
+	1.Show Stopper defect (A defect which not allowing you to Proceed Next)
+		>Menus of ATM Machine is not Clickable after Inserting/Swapping Card.
+		>Login with OTP required but OTP is not coming on Time
+	2.Test Environment not ready on time
+	3.Build not recieved 
+	
+12.Schedule: Deadlines for Every Activity
+	
+	Activity Name:				No. of Days required		Date Range
+	-----------------
+	1.Test Analysis				2				27-10-2021 to 28-10-2021
+	2.Test Design(Writing Test Cases)       7				
+	3.Test Implementation
+		>Writing Test Script		5
+		>Test Environment Setup		2
+	4.Test Execution			10
+
+13.Staffing and training needs:
+	Staffing :- Hiring new Employees according to Need
+	Training Needs for newly Hired Employee or Old Employee
+		 -Tool Training
+		 -Domain Training
+
+14.Roles & Responsibilities (Who is incharge of Which activity)
+	Activity Name:					Responsible Person		Designation
+	-----------------				------------------
+	1.Test Analysis					Sahil Kolge			Sr. Tester
+	2.Test Design(Writing Test Cases)		Sahil Kolge			Sr. Tester
+	3.Test Implementation
+		>Writing Test Script			Neha Kamboj			Automation Engineer
+		>Test Environment Setup			Neha & System Engineer		-
+	4.Test Execution				Jashwanth K			Jr. Tester
+
+15.Risk & Contingencies: Project Risk or Process Risk:
+-----------------------------------------------------
+>It can occure when Project Execution is Happening
+Technical Issue:
+	>BRS/SRS is having not clear requirements which leads Unnecessary communication with BA.
+	>Build or Test Environment not ready on time
+
+Supplier Issue:
+	>POS Machine not delivered on time
+
+Political/Personl Issue:
+----------------
+	>Health Issue
+	>One tester is nor comfortable with another Tester 
+	>Conflicts with team or Team Leader
+
+16.Software Risk issues: (Product Risk | Quality Risk)
+	Degree to which Product meets Customer Need.
+	>It happens Mostly After Release.
+	
+	>Delivery of Incomplete Product.  (Out of 10 you delivered Only 9 requirement)
+	>Delivery of Faulty Product ( Out of 10 only 9 requirement is working fine & 1 req not working as 				     Expected)
+	>Software Hard to Use or Slow to Respond 
+	>Govt. Policy get Changed
+		As soon as Govt. Policy get Changed that Policy should be implemented since till that Product 		is not usable.
+
+17.Approvals
+	
+	Name:		Designation		SignWithDate
+	
+
+----------------------------------------------------------------------------
+
+
+Test Design Technique:
+---------------------
+	Technique means  an efficient way of doing something so  that good results can be achieved
+
+	Test Design : Writing Test Scenario, & Test Cases
+
+
+	An efficient way of Writing Test cases so that there is less number of Test cases but good Coverage 	about quality.
+
+	This is Useful since we can not do Complete testing(All Combinations of inputs are not possible)
+
+
+1.Specification Based Tech:(Document Based hence It is followed when documents are available) > Black Box
+	1.Equivalance Class Partitioning:
+		>Group the Inputs or Outputs according to thier Behavior so that they are giving same output.
+		>Select One value from Each Partition.
+		>If Testing with Selected Value is Passed in  Particular Partition then Testing with Other 		values from same partition will be considered as Pass Since Partitions was made according to 		thier behavior.
+
+		For DL	Only 18 to 60 year Old People can apply
+
+		1	17|18		60|61		100|		
+		invalid		valid		invalid
+
+		i.e. 15, 25, 75
+
+		if(age>=17 & age<=61)
+			allow
+		else
+			not allow
+
+
+		if(age>18 && age<60)
+			allow
+		else
+			not allow
+
+		DisAdvantage:
+		------------
+		It do not consider boundary Values & they is good Chance of Errors on Boundary.
+
+	2.Boundary Value Analysis
+		>Group the Inputs or Outputs according to thier Behavior so that they are giving same output.
+		>Select Valid Partition & Do just +1 & -1 to  Edges/Boundaries of Valid Partition
+		>i.e. 17,18,19,59,60,61  > 3 Point Boundary
+		      17,18,60,61  > 2 Point Boundary
+
+		For DL	Only 18 to 60 year Old People can apply
+		
+		1	17|18		60|61		100|		
+		invalid		valid		invalid
+		
+			  18 		60
+			17   19      59    61
+
+
+		0 - 69|70	75|76	 
+
+	3.Use Case Testing:
+	 
+
+		1.USe Case ID:  UC_Withdraw001
+
+		2.Goal: To withdrow money from ATM Machine
+
+		3.Pre-Conditions:
+				1.Valid ATM card with Valid PIN
+				2.Balance in Account & ATM Machine
+				3.ATM Machine should be in working Condition
+
+		4.Actors:
+			1.Primay Actor: USer
+			2.Supporting Actor: ATM Card
+
+		5.Path/Flow : Basic/NOrmal Path
+
+		6.Steps:
+		1.User: Swipe debit Card
+ 		 System:'Select Language' Message should display
+
+		2.User: Select required Language 
+		  System: Various Menu's should display
+
+		3.User: Select 'Withdrow' option
+		  System: 'Enter Amount' message should display
+
+		4.USer:Enter Amount & Continue
+		  System: 'Enter PIN' message should display
+
+		5.U:Enter PIN & Continue
+		  S:'Select Account Type' message should display
+
+		6.User: Select Account Type as Saving or Current
+		  S:'Do you want reciept' message should display 
+
+		7.U: Select 'Yes' or 'No' for reciept
+		  S:1.Cash should be dispensed after processing
+		    2.Reciept if Yes for reciept was Selected
+
+	POST-Condiion:
+	1.Cash equals to entered amount should be dispensed
+	2.Reciept(if yes for reciept was selected)
+
+
+
+2.Structure Based Tech (White Box)
+	1.Statement Coverage
+	2.Decision Coverage
+
+3.Experience Based Tech:
+	All thse techniques are based on previous Experience of Tester.
+	If Tester is having more experience then more number of Defects will be identified
+	1.Error Guessing:
+		>Guessing Error Based on My Previous Experience
+		>Random Testing Based on Experience(It will be not Systematic Testing)
+		>There is no Planned Test Cases in advance 
+		>It is not a replacement of Systematic Testing/Actual Testing
+		>It should be done in Addition of Systematic Testing for Increasing Quality
+
+	2.Exploratory Testing:
+		>As name suggest I need to do Exploration of Application & Understand the flow then create 		Test Charter(Having Objective of Testing, Steps, Expected Results).
+		>It is followed when there is no Documents or less Documents or severe time pressure is there.
+		>Mostly Followed in Agile where less focus on Documentation & more focus on Working Product is 		there.
+		>Here time slots of 120 minutes are given
+			30 min for UnderStanding Application
+			30 min for Preparing Test Charter Containing Objective & Steps of Testing
+			30 min for Exection
+			30 min for logging & reporting
+		>It is cun-current Test Desiging, executing & logging Activity
+		>Done in addition or in Replacement of Systematic Testing.
+
+	3.Checklist Based Testing:
+		>Here list of Checks are Created in Advance for increasing number Defects
+		>Checklist is created By Tester or Group of Tester.
+		>It is always done in addition of Systematic Testing.
+
+
+Defect Management:
+------------------
+A process/rule/ Protocol which need to be followed as soon as defect is identified.
+			>As soon as defect is identified we need to report defect 
+				-format of Report
+				-flow of defect i.e Defect will be forworded to directly developer or to 				manager
+				>Severity & Priority of defect.
+
+
+
+Severity 							Priority
+--------							--------
+1.It deals with impact of defect from				1.It deals with impact of defect form business
+functionality P.O.V 						/client/BA P.O.V.
+2.It is to see impact of Defect Functionality			2.It tells Which defect should get fixed First.
+3.Levels:							3.Levels
+ High:								 High: Immediate Fixing Required
+	Basic/Critical Functionality is not working
+	Show Stopper defect, Application getting Freez
+	Automatic termination of Application
+
+ Medium :							 Medium: Defects should get Fixed Before 
+	Less Important defects in Feature/Functions				release
+	Performance Defects
+
+ Low:								 Low: can fixed in Next release
+	It is not a Functional defects
+	It is Color, Font, Size, Allignment related defects
+
+4.Decided By tester						4.Decided By BA/Client/Developer	  
+H.S & H.P:
+----------
+1.Outgoing Call feature not working
+2.Sharing or Posting is not working
+3.Debit Card is not detected By ATM Machine
+
+H.S & M.P
+1.If Login not working in Cleartrip but Without Login Booking of Flight is Possible
+2.Less frequent Defects like Sometime In Single time call is not place ever if Proper network is there.
+
+
+M.S & L.P:
+----------
+1.View Help Button is not Working
+
+L.S. & H.P:
+----------
+1.Photos of Principal & H.O.D is Exchanged
+2.In Contact Us Email Id & Mobile Number is Wrongly Mentioned
+
+L.S. & L.P:
+----------
+1.Spelling Mistake or Grammatical Mistake on Page Where less user visits are there
+2.Mr. & Mrs. is not written in front of name in ATM machine after Swapping.
+
+
+-------------------------------------------------------------------------------------
+Defect Life Cycle:
+-----------------
+1.Tester > developer > tester   : Small Scale Company
+2.Tester > TL > develper > Tester : Medium Scale company
+3.Tester > TTL > DTL > developer > Tester  : MNC like Structure.
+
+Defect Reporting Template/Format:
+---------------------------------
+1.Defect ID:
+2.Module Name/Sub Module Name: Module In which it is identified.
+3.Severity 
+4.Priority
+5.Phase : Which Phase of SDLC defect is identified
+6.status: New/Open/Assigned/ Fixed/close
+7.Summary: 1- line Description like Subject in Email
+8.description: 
+	Steps:
+	
+	Expected Result:
+	Actual Result
+9.Type of Defect:
+	Functional Defect: Wrong Missing/Extra
+	Non-Functional Defect:
+10. Date:
+11.Company Name: Mention Company name if Project is Out Sourced
+12.Test Case ID:
+13.Reported By:
+14.Reported To:
+	
+
+Scenario :		Test Case Objective
+	
+1.Browse:		1.To Check Browse with valid Size & Valid Format
+			2.To Check Browse with Valid Size & Invalid Format
+			3.To Check Browse with invalid Size & Valid Format
+			4.To Check Browse with invalid size & invalid Format
+		
+
+2.Upload
+			1.To Check Upload with Selected File
+			2.To Check Upload without any File Selection
+
+
+
+What is Selenium:
+----------------
+>It is Tool Which is dedicated for Web application testing
+>It is Functional Testing Tool.
+>It is best suited for Regression Testing
+>Free
+>Open Source: Source code is available on internet
+>It is Platform independant (It Supports Multiple OS Linux, MAC, Windows)
+>It Supports Multiple Browsers i.e Chrome, Firefox, Opera, IE browser etc.
+>It Supports Multiple Programming Language i.e Java, C#, ruby, Python etc.
+
+Type of Application:
+1.Console Based  which used CMD
+2.Desktop Based Application: Which needs installation on Every System
+3.Web Application : Application Which needs url(like http://google.com) & they are 		    developed using HTML
+4.Mobile Application: That Needs installation in Every Mobile
+
+
+Selenium Suite:
+--------------
+1.Selenium IDE
+	>It is available as Firefox & Chrome Plug-in
+	>It Supports Record(It automatically Writes Script) & PlayBack(For Playing/Executing recorded 	Script)
+	>It is Good Tool for Person who is wishing to start with Automation Testing 
+	>Easy to Learn & GUI is also Easy
+
+	DisAdvantage:
+	1.It Supports only 2 browser (Chrome & Firefox)
+	2.It does not Support of Programming Language Hence Code Re-usability is not there Hence It is
+	not good for Writing Detail Scripts
+	3.data base Testing not possible
+	4.Proper Sharable report is not generated
+	5.Data Reading is not Supported from Excel File
+	6.Only 3 Columns are not Sufficient for Detail Testing
+
+2.Selenium RC | Selenium 1.0 (Selenim RC is Outdated since It is Slow)
+		Selenium RC was Slow since
+		1.RC Server needed as Middle Man in Between Eclipse & Browser
+		2.RC Server needed to be Started & Stopped EveryTime Manually
+	
+3.Selenium WebDriver | Selenium 2.0 |Selenium 3.0 |Selenium 4.0
+	>Both Supports Multiple Browser testing (like Chrome, Firefox, Opera, IE etc.)
+	>Both Supports Multiple Programming Language i.e Java, ruby, Python, etc.
+	>Both Are Test Designing(Writing Script) + Test Execution Tool.
+	But Selenim RC is Outdated since It was Slow & WebDriver is Fast
+
+	Till Selenium WebDriver Only One System is Sufficient	
+
+4.Selenium Grid:
+	>In this multiple Systems are involve. One Master System(HUB) & Multiple Slave system(Node) 	are involve.
+	>Test Execution will be Controlled from Master System
+	>It is used for various Browser & OS combination like Firefox on MAc, Firefox on Windows, 	Firefox on Linux etc.
+	>With the help of Paralle; Testing Execution time is minimized (In Less Time More Execution 	happens)
+	>It is Just Test Execution (Test Scripts are written in the WebDriver Only)
+	>Here, Multiple Machine + Multiple Browser Testing Happens.
+	 
+
+
+Writing Test Case Means you did planning for Testing
+
+Planned Test case > Test Script (So that Tool can understand It)
+Like Selenium understand Java so your Test cases should be converted into Language of tool so that tool can underStand What you have given instruction
+
+
+Planned Test case > Test Script (So that Tool can understand It)
+Like Selenium understand Java so your Test cases should be converted into Language of tool so that tool can underStand What you have given instruction.
+
+
+System Configuration Needed for Selenium WebDriver:
+---------------------------------------------------
+1.JDK
+2.Eclipse
+3.Selenium Language Binder
+	Selenium Library available for Java, ruby, python
+	Selenium Java Libraries are needed.
+4.Drivers for Every Browser is Needed.
+		Chrome > chromedriver.exe
+		Firefox > geckodriver.exe
+	
+
+
+
+The path to the driver executable must be set by the webdriver.chrome.driver system property;
+
+
+Element Locators:
+-----------------
+These are Unique Properties By Which Selenium is able to identify/find Object on Web Page
+1.id
+2.name
+3.linkText
+4.Css
+5.Xpath
+
+
+
+
+
+Synchronization Problem:
+------------------------
+In this there is mismatch between Speed of Two Things 
+1.Selenium
+2.AUT (OrangeHRM)
+
+
+When to do Automation:(Which Test Case You should consider for Automation)
+-------------------
+1.There is re-usable & repitable Test case.
+	-Smoke Testing
+	-Data Driven Testing:
+		It is process in Which we repeat same steps with different set of Data.
+	-Compatibility Testing
+		Running same test case with different Browser.
+2.Testing which is Not possible Manually
+	-Performance Testing
+
+Why to do Automation:
+>Speed is More
+>Accuracy is More
+>Less Human Errors
+>Night time also can be ustilized
+>Reliable
+>Consistant
+>
+
+
+Xpath Works for Every Object:
+-----------------------------
+
+Absolute Xpath is not recommended Since it is Page Layout dependant. In Next Version LayOut might get Change.
+Absolute Xpath: /html/body/div[3]/form/div/input
+
+Relative Xpath:
+
+
+
+What is CSS:
+------------
+It is used for controlling font, size, allingment,color etc.
+
+
+CSS Attributes/Properties also can be used for locating Object.
+
+1.CSS with ID:
+	tagname#id
+2.CSS with name/type/value/placeholder/any Property
+	tagname[name/type/value/any property='value of that property']
+3.CSS with className
+	tagname.className
+
+
+Aniket Shaha: Unable to 
+HArshit R: Did not read
+Monali Kirde > No Response
+Mayuri Sawant > Responded
+Soumili Das > Did Not Read
+Shubham Gaikwad > Black Box Testing (Did not recieved Complete Answer)
+Sahil Kolge > White & Black Box...Task of Tester
+Piyush Singh > Agile
+Ayush Raj : 
+-----------------------------------------------------------------------
+Working with RadioButton:
+------------------------
+
+
+Thread.sleep() > Not recommended Since It take whole time for Waiting.
+ 
+You should use implict or Explicit wait given By Selenium
+
+Implict Wait :
+	>It is Declared Once at Begining & after that It is Applicable for All below Objects
+	>It waits Only for visibility of Object
+	
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));  
+
+ExplictWait:
+	>It Is used Multiple time for Multiple Condition/Object
+	>Here, we Explicitly ask webDriver to Wait
+	>It can wait on various conditions like visiblity, invisibility, alert, frame, title etc. 
+	
+	WebDriverWait wt=new WebDriverWait(driver, Duration.ofSeconds(15));
+	wt.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[value='2']")));
+
+Both, Takes Only desired time for Waiting	
+
+
+
+Prajakta 
+Sahil 
+Shubham   Gaikwad > Done task Early
+
+
+
+iFrame :
+--------
+Always Starts with tag as 'iframe' & it is used to show content from multiple WebSite/Pages.
+
+
+
+
+
+
+Data Driven Testing:
+		It is process in Which we repeat same steps with different set of Data.
+
+Daily 100 SMS is Limit & on 101th Error is Expected
+Then You need to send 100 sms & 101th Error is Expected
+
+
+Performing same thing with different Set of Data is Called as Data Driven Testing
+
+Test Script						Data-Source
+Test Script(Java)		<Apache POI>		Excel(.net)
+Test Script			<JDBC>			DataBase
+Test Script						DataProvider of TestNG 
+
+
+Next Step is Download Apache POI Since Our Data Will be Stored Mostly in Excel
+-----------------------------------------------------------------------------
+
+Apache POI Supports both Extention of Excel File
+		.xls & .xlsx
+
+Read WorkBook > Read WorkSheet > Read Cells(row, col)
+
+
+xls				.xlsx
+HSSF				XSSF
+
+
+------------------------------------------------------------------------------------------------------------------------
+FrameWork: Set of Rules for having good outcome
+
+
+Test Automation  FrameWork: It is of Re-usable Classes, Methods & Object Repository.
+---------------------------
+
+
+Adv:
+1.LOC will be less
+2.It creates Re-usable Class Which can be Used at Multiple Places
+3.It Hides Complexicity of Programme & It gives a Easy Method for Calling
+
+Types of FrameWork:
+1.User Defined FrameWork:
+	1.Data Driven FrameWork
+	2.KeyWord Driven FrameWork
+	3.Hybrid (Combination of Two or More FrameWork)
+2.Pre-defined FrameWork:
+	1.TestNG
+	2.Junit
+	3.Cucumber
+
+TestNG: (NG Means Next generation) 
+------
+
+By default WebDriver do not have mechanism for generating any reports. So TestNg Gives Power of Generating reports.
+
+Similar to TestNG we have Junit. Let's See Advantage of TestNG over Junit.
+
+Adv of TestNG:
+1.Parallel Testing: (Same Can be Executed Simultanoulsy with two or more Browser or Two or more instance of Same Browser can be Created). Parallel Testing is not available in Junit.
+2.Test Suite(Collection of Multiple Test Classes) can be Created Easily & Classes from Different Package also Can be included.
+	But In case of Junit Classes from Other Package Can not be included in Test Suite.
+3.MeaningFul Annotation name is given.
+ 
+
+
+@BeforeMethod
+@AfterMethod   > Both Executed for Each @Test .i.e if You have two @Test then 2 time BeforeMethod & AfterMethod will Execute.
+
+
+
+Link DataProvider with Excel File.. Copy the Data(UserName & PassWord) from Excel & store into the dataProvider then do DataDrivenTesting
+
+
+@DataProvider is Used for Storing Data used for Testing Internally in the TestNG Class Itself.
+
+Previously we have seen our Data Was Stored in Excel File. Today This Time Our data will be Stored in DataProvider for DataDriven Testing.
+
+
+
+
+Page Object Model:
+------------------
+Number of Java Classes should be Equals to Number of Pages available on WebSite/Application
+And 
+Keep all Objects Property at top & respective actions/steps at the bottom.
+
+Page Object is not officially announce by Selenium but Page Factory is officially given by Selenium 
+
+Why(Advantage):
+---------------
+1.Easy to trace
+2.Easy to Change
+3.Easy to Maintain
+4.Since re-usable Methods are Made Hence we can call those Methods at any time.
+
+
+
+Elements|Object Repository:
+---------------------------
+It is single place where we keep all object Property like xpath, css, name, linkText,id etc so that tomorrow if  any Objects Property is Changed then Tester should feel easiness while doing Changes(If Tester does changes at One Place then it should reflect at all other places Where it has been used)0
+
+Why(Advantage):
+---------------
+1.Easy to trace
+2.Easy to Change
+3.Easy to Maintain
+
+This is done with help of Property file or Json file or xml file;
+
+
+Property file:
+--------------
+
+
+
+Create table 
+Insert some values (Username & Password)
+Do commit of entered record
+
+After this read data from dataBase
+ 
+
+
+
+
+
+jdbc:mysql://148.72.215.41:3306/testingdb
+
+
+
+Java Classes			<Apache POI>		Excel File
+Java Classes			<JDBC>			Database
+
+
+
+Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","oracle");
+
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/sonoo","root","root");
+
+What is Maven ?
+---------------
+>It build management tool.(Create, update, edit build )
+>Project Management Tool
+	Since It gives template/Architecture to your Project Hence it will be considered as Project Management Tool.
+>It manages all Jars which is needed to your project
+		-selenium 
+		-apache poi
+		-testng
+		-junit
+		-extent report
+
+
+You download  lib/jar, extract jar, Add as a External Jar, 
+You download  lib/jar, extract jar, Add as a External Jar, 
+
+Extent Report:
+--------------
+To Enhance reporting capability of Selenium Extent report is Used
+
+
+
+
+KeyWordDriven FrameWork:
+------------------------
+It is framework in which re-usable Actions/Keywords are created for every Steps/actions that you perform on Browser. This is created by sr. Automation tester for Jr. Automation Tester for Easiness in Automation Testing.
+
+In Background for Every keyword corresponding methods/Functions are created
+
+
+
+Java	 Apache POI		Excel
+Java	 OJDBC	        	database
+Java	 opencsv		csv
+
+
+
+ Jira:
+
+STLC:
+-----
+
+1.Test Planning: Test Manager Creates Test Plan which will have Objective & Strategy of Testing
+2.Test Monitoring & Control:
+	>Done By Manager or person allocated By Test Manager
+	>Monitoring Test Activity happens
+		>Creating Test Cases/Day
+		>Test Cases Created by per Tester
+		>Test Cases Executed Per Day
+		>Test Cases Executed Per Tester
+		>Defect identified By Per Tester
+		>Defect identified By testing Team		> JIRA
+
+3.Test Analysis : UnderStand SRS/BRS
+4.Test Design : Writing Test Cases
+5.Test Implementation:  Writing Automation & Set the Test Environment
+6.Test Execution:
+		> Product will be given by Developer
+		> Tester will start performing Testing
+
+
+		Test Cycle 1:
+		-------------
+		1000 TC > Execute 1000 TC  > 200 Defects
+		200 Defects are reported
+			
+			Developer will Fix Defects & Updated Product/software will be given to you/tester once again.
+
+
+		Test Cycle 2:
+		------------
+		ReTesting & Regression Testing will be performed
+		50 Defects are identified & reported 
+						Developer will Fix Defects & Updated Product will be given to you once again
+
+
+		Test Cycle 3:
+		-------------
+		ReTesting & Regression Testing will be performed
+		0 Defects are identified 
+					
+
+		In Test Cycle 3 in above you met required Quality.
+7.Test Clouser Activity
+	>Storing & Sharing Artifacts/Documents
+	>Storing & Sharing Experience
+
+
+Managing Test Cycle also possible in Case of JIRA.
+
+
+
+Agile:
+-----
+Product Backlog : Total Pending Requirement/User Story for Complete Product
+Sprint Backlog  : Total Pending requirment / User Story for One Iteration
+
+1000 User Story
+250 req  > R1  >
+250 req	 > R2
+250 req  > R3
+250 req  > R4
+
+1st Day of Engineering
+ Total Subject to Clear Degree : 40    : Product Backlog ()
+ Total Subject  per Sem to Clear : 5
+
+R1 		>D	>C	>T	>Dep	>Maintenance 		Iteration/Sprint 1
+PB:1000						PB:750
+SB:250						SB:0
+
+
+R1 + R2		>D	>C	>T	>Dep	>Maintenance 		Iteration 2
+PB:750						PB:500
+SB:250						SB:0
+
+R1 + R2	+ R3	>D	>C	>T	>Dep	>Maintenance 		Iteration 3
+PB:500						PB:250
+SB:250						SB:0
+
+R1 + R2	+ R3+R4	>D	>C	>T	>Dep	>Maintenance 		Iteration 4
+PB:250						PB:0
+SB:250						SB:0
+
+
+
+Scrum Master : Team Lead > Gives Guidance & Support
+Product Owner : BA
+
+
+Whole Team Approach:
+--------------------
+A group is framed in Which designer, programmer, tester, customer representative will be involve.
+
+
+Adv:
+1.Quality is not responsibility of indivisual person its a group responsibility.
+2.Customer is acting as immediate Validator which will give high Quality of End Product
+3.There will be 15 min Daily StandUp Meeting (Due to this transParancy within team is there)
+	- What Happened YesterDay
+	- Any bottleneck ?
+	- What is Planned for Today ?
+4.Scrum Board also Adds in transParancy: (Notice Board of Your Collage)
+	
+	To Do 			In Progress			Done
+	-----			-----------			-------
+								Writting TC
+	
+								Writing Code
+
+	
+User Story:
+------------
+As a Customer 
+I want login Function
+So that I can do banking transactions at any time
+
+>Agile Iterations happens for 1-4 weeks only
+
+
+
+
+As a visitor I want search feature on Website  so that I can search any interested course
+
+Retrospective Meeting:
+----------------------
+Happens at the end of Every Iteration/sprint to Check what went right, what went wrong & What is improvement areas for future.
+
+
+As a <Type of Customer>
+I want <Some Feature or Function>
+So that <Some Benefits to Customer>
+
+
+-----------------------------------------------------------------------------------------------------------
+Epic : Larger User Story which can be splitted/broken in Multiple User Story
+       High Level of Requirement
+
+
+As a Customer of The Bank
+I want Mobile Banking Application 
+So that I can do Banking Transaction at any time
+	
+
+
+User Story Points:
+------------------
+	Estimated Efforts for completion of any User STory or Task
+
+Fibonacci Series :
+-----------------
+0,1,	1, 2, 3, 5, 8, 13, 21 etc
+
+
+
+
+
+Task of Developer:
+----------------
+1.Review/Understand User Story
+2.Design
+3.Code writing
+4.Writing Unit Testing Test Cases
+5.Execute Unit Testing Test Cases
+6.Debugging(Removing Bug Activity)
+
+
+Task of Tester:
+1.Review/Understand User Story
+2.Write Test Cases
+3Write RTM
+4.Review
+5.Test Environment Setup
+6.Execute Test Case
+7.Defect Reporting
+8.Writing Automation Scripts etc.
+------------------------------------------------------------------------------------------------------
+
+EPIC:
+-----
+As a Student I want Web Application so that I can complete my course at any time
+As a trainer I want web application for login so that I can my manage courses
+so that I can explore courses without re
+As a Visitor I want udemy Web Application gistration
+
+User Story:
+-----------
+As a visitor I want search feature on Website  so that I can searAch any interested course
+s a Visitor I want sign-up feature  on website so that I can register my self
+As a Visitor I want sign-in option so that I can sign-in when ever required
+As a Visitor I want filter option so that I filter out some not interested courses.
+
+
+1.Create a Sprint 
+2.Add User Stories to Sprint
+3.Click on Sprint
+
+
+Created Test Cycle > Adding Test into Cycle.
+
+
+
+JIRA: It is Test Management Tool which manages all phases of STLC
+
+1.Test Planning
+2.Monitoring & Control
+3.Test Analysis
+4.Test Design 
+5.Test Implementation
+6.Test Execution
+7.Test Clouser
+
+>Created  Scrum Project
+>Created Version
+>Created Epic
+>Created User Story
+
+>Created Sprint
+>Adding Story to Sprint
+>Started Sprint
+>Created Sub-Task for Every User Story
+>Practicing Scrum Board
+
+>Added Plugin for Test Management > Zephyr
+>Created Test Cases
+>Test Cycle Creation
+>Test Execution
+>Defect|Bug  Reporting
+>Report
+	BurnDown Chart: Represents how many story points you have burned against given timeline
+			Its a graph with Story point with Y-axis & Number of Days as X-axis.
+
+
+------------------------------------------------------------------------------------------------------------------
+Similar to Jira : ALM(QC)- HP, TestLink - Free/OpenSource, Tarantula etc.
+
+----------------------------------------------------------------------------------------------------------
+
+
+
+
